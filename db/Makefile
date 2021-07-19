@@ -4,6 +4,8 @@ createdb:
 	docker exec -it postgres-12 createdb --username=root --owner=root simple_bank
 dropdb:
 	docker exec -it postgres-12 dropdb simple_bank
-makemigration:
+migrateup:
 	sql-migrate up
+migratedown:
+	sql-migrate down
 .PHONY:	createdb
