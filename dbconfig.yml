@@ -1,7 +1,7 @@
 production:
   dialect: postgres
-  datasource: host=localhost dbname=simple_bank user=root password=secret
-  dir: migrations
+  datasource: host=localhost dbname=simple_bank user=root password=secret sslmode=disable
+  dir: ./db/migrations
   table: migrations
 development:
   dialect: postgres
