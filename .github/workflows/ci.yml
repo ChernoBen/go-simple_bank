@@ -34,6 +34,6 @@ jobs:
     - name : Run migrations
         run: make migrateup
     - name: Test
-      run: make test
+        run: make test
 #tag with para prover input parametros para uma action
 #options com opções que retornam avisos de status de build do postgres
