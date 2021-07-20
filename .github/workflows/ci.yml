@@ -35,9 +35,6 @@ jobs:
     
     - name: Install migration lib
       run: go get -v github.com/rubenv/sql-migrate/...
-    
-    - name: config pg container
-      run: make postgres
       
     - name: Run migrations
       run: make migrateup
