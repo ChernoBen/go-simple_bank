@@ -71,6 +71,7 @@ func (store *Store) TranferTx(ctx context.Context, arg TransferTxParams) (Transf
 			AccountID: arg.FromAccountID,
 			Amount:    -arg.Amount,
 		})
+
 		if err != nil {
 			return err
 		}
@@ -78,9 +79,11 @@ func (store *Store) TranferTx(ctx context.Context, arg TransferTxParams) (Transf
 			AccountID: arg.FromAccountID,
 			Amount:    arg.Amount,
 		})
+
 		if err != nil {
 			return err
 		}
+
 		return err
 	})
 	return result, err
